@@ -1,0 +1,8 @@
+.product-card h2 { font-size: 1.1rem; }
+#product-photo img { margin: 0; width: 100%; }
+#product-photo:empty { display: none; }
+#checkout .form-panel { margin-top: 1rem; }
+.cart-row { display: grid; grid-template-columns: 1fr auto; gap: .8rem; }
+.order-status { max-width: 260px; margin-top: .6rem; }
+#quantity { max-width: 100px; }
+@media (max-width: 520px) { .cart-row { grid-template-columns: 1fr; } }

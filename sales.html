@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orders and sales | NeighbourNest</title>
+  <link rel="stylesheet" href="../shared/site.css">
+  <link rel="stylesheet" href="marketplace.css">
+  <script defer src="../shared/sample-data.js"></script>
+  <script defer src="../shared/site.js"></script>
+  <script defer src="orders.js"></script>
+</head>
+<body data-root="../" data-page="sales" data-access="business">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header app-shell">
+    <div class="header-inner">
+      <a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">N</span>NeighbourNest</a>
+      <span class="community">Bashundhara community</span>
+      <form class="search-form" action="../community/search.html" role="search">
+        <input name="q" type="search" aria-label="Search NeighbourNest" placeholder="Search the community" required>
+        <button class="btn small secondary">Search</button>
+      </form>
+      <span class="header-role" id="header-role"></span>
+      <a class="btn small secondary header-auth" id="header-auth" href="../account/login.html">Log in</a>
+      <details class="mobile-menu">
+        <summary class="btn small secondary">Menu</summary>
+        <nav aria-label="Mobile navigation">
+      <div class="nav-group">
+        <span class="nav-label">Explore</span>
+        <a class="nav-link" href="../community/feed.html">Community posts</a>
+        <a class="nav-link" href="../marketplace/shop.html">Marketplace</a>
+        <a class="nav-link" href="../marketplace/businesses.html">Business directory</a>
+        <a class="nav-link" href="../community/events.html">Events</a>
+        <a class="nav-link" href="../community/notices.html">Notices</a>
+        <a class="nav-link" href="../community/about.html">About</a>
+        <a class="nav-link" href="../community/contact.html">Contact</a>
+      </div>
+      <div class="nav-group" data-roles="community business admin" hidden>
+        <span class="nav-label">Account</span>
+        <a class="nav-link" href="../account/dashboard.html">Dashboard</a>
+        <a class="nav-link" href="../account/profile.html">My profile</a>
+        <a class="nav-link" href="../community/inbox.html">Inbox</a>
+        <a class="nav-link" href="../marketplace/cart.html" data-roles="community" hidden>Cart</a>
+        <a class="nav-link" href="../marketplace/orders.html" data-roles="community" hidden>My orders</a>
+      </div>
+      <div class="nav-group" data-roles="business" hidden>
+        <span class="nav-label">Business</span>
+        <a class="nav-link" href="../marketplace/seller.html">Business dashboard</a>
+        <a class="nav-link" href="../marketplace/business-profile.html">Business profile</a>
+        <a class="nav-link" href="../marketplace/products.html">Products and stock</a>
+        <a class="nav-link active" href="../marketplace/sales.html" aria-current="page">Orders and sales</a>
+      </div>
+      <div class="nav-group" data-roles="admin" hidden>
+        <span class="nav-label">Admin</span>
+        <a class="nav-link" href="../admin/dashboard.html">Overview</a>
+        <a class="nav-link" href="../admin/users.html">Users</a>
+        <a class="nav-link" href="../admin/businesses.html">Businesses</a>
+        <a class="nav-link" href="../admin/moderation.html">Moderation</a>
+        <a class="nav-link" href="../admin/categories.html">Categories</a>
+        <a class="nav-link" href="../admin/publications.html">Notices and events</a>
+        <a class="nav-link" href="../admin/homepage.html">Homepage</a>
+      </div>
+        </nav>
+      </details>
+    </div>
+  </header>
+  <noscript><p class="public-main">Enable JavaScript to use the interactive demo.</p></noscript>
+  <div class="layout">
+    <aside class="sidebar">
+      <nav aria-label="Site navigation">
+      <div class="nav-group">
+        <span class="nav-label">Explore</span>
+        <a class="nav-link" href="../community/feed.html">Community posts</a>
+        <a class="nav-link" href="../marketplace/shop.html">Marketplace</a>
+        <a class="nav-link" href="../marketplace/businesses.html">Business directory</a>
+        <a class="nav-link" href="../community/events.html">Events</a>
+        <a class="nav-link" href="../community/notices.html">Notices</a>
+        <a class="nav-link" href="../community/about.html">About</a>
+        <a class="nav-link" href="../community/contact.html">Contact</a>
+      </div>
+      <div class="nav-group" data-roles="community business admin" hidden>
+        <span class="nav-label">Account</span>
+        <a class="nav-link" href="../account/dashboard.html">Dashboard</a>
+        <a class="nav-link" href="../account/profile.html">My profile</a>
+        <a class="nav-link" href="../community/inbox.html">Inbox</a>
+        <a class="nav-link" href="../marketplace/cart.html" data-roles="community" hidden>Cart</a>
+        <a class="nav-link" href="../marketplace/orders.html" data-roles="community" hidden>My orders</a>
+      </div>
+      <div class="nav-group" data-roles="business" hidden>
+        <span class="nav-label">Business</span>
+        <a class="nav-link" href="../marketplace/seller.html">Business dashboard</a>
+        <a class="nav-link" href="../marketplace/business-profile.html">Business profile</a>
+        <a class="nav-link" href="../marketplace/products.html">Products and stock</a>
+        <a class="nav-link active" href="../marketplace/sales.html" aria-current="page">Orders and sales</a>
+      </div>
+      <div class="nav-group" data-roles="admin" hidden>
+        <span class="nav-label">Admin</span>
+        <a class="nav-link" href="../admin/dashboard.html">Overview</a>
+        <a class="nav-link" href="../admin/users.html">Users</a>
+        <a class="nav-link" href="../admin/businesses.html">Businesses</a>
+        <a class="nav-link" href="../admin/moderation.html">Moderation</a>
+        <a class="nav-link" href="../admin/categories.html">Categories</a>
+        <a class="nav-link" href="../admin/publications.html">Notices and events</a>
+        <a class="nav-link" href="../admin/homepage.html">Homepage</a>
+      </div>
+      </nav>
+    </aside>
+    <main class="main" id="main">
+      <div class="page-toolbar">
+        <div class="page-title"><h1>Orders and sales</h1></div>
+        
+      </div>      <div class="panel" id="sales-summary"></div><form class="panel filter-bar" id="order-filter">        <div class="form-group"><label for="status">Order status</label><select id="status" name="status"><option>All statuses</option><option>Pending</option><option>Confirmed</option><option>Completed</option><option>Cancelled</option></select></div></form><section id="order-list" class="stack"></section>
+    </main>
+  </div>
+  <footer class="site-footer">NeighbourNest · Local community and marketplace <span class="footer-links"><a href="../community/about.html">About</a> · <a href="../community/contact.html">Contact</a></span></footer>
+</body>
+</html>
